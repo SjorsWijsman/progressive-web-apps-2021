@@ -1,0 +1,27 @@
+{
+  "name": "progressive-web-apps-2021",
+  "version": "1.0.0",
+  "description": "Project for Progressive Web Apps course",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SjorsWijsman/progressive-web-apps-2021.git"
+  },
+  "author": "Sjors Wijsman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SjorsWijsman/progressive-web-apps-2021/issues"
+  },
+  "homepage": "https://github.com/SjorsWijsman/progressive-web-apps-2021#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
