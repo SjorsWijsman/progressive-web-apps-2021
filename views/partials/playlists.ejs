@@ -1,9 +1,15 @@
-<container id="user"></container>
 <section id="playlists-container">
   <header>
-    <h2>Your Playlists</h2>
-    <input type="checkbox" id="playlist-owner" name="playlist-owner" onchange="filterPlaylists()">
-    <label for="playlist-owner" >Only display playlists you own</label>
+    <h2>Your Public Playlists</h2>
+    <!-- <input type="checkbox" id="playlist-owner" name="playlist-owner" onchange="filterPlaylists()">
+    <label for="playlist-owner">Only display playlists you own</label> -->
   </header>
-  <container id="playlists"></container>
+  <container id="playlists">
+    <% for (playlist of playlists) { %>
+      <a href="/<%= playlist.id %>" class="playlist">
+        <img src="<%= playlist.images[0].url %>" alt="Playlist cover image">
+        <p><%= playlist.name %></p>
+      </a>
+    <% } %>
+  </container>
 </section>
