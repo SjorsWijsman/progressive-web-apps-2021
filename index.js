@@ -4,6 +4,9 @@ const app = express();
 // Set view engine to ejs
 app.set('view engine', 'ejs');
 
+// Set static folder
+app.use(express.static('static'));
+
 // Home page
 app.get('/', function(req, res) {
     res.render('pages/index');
