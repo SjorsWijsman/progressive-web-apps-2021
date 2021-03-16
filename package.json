@@ -8,10 +8,11 @@
     "example": "examples"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "prestart": "npm run build",
+    "start": "serve ./dist",
     "build": "npm-run-all build:*",
-    "build:html": "node scripts/build-html.js"
+    "build:html": "node scripts/build-html.js",
+    "build:static": "grunt concat"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,13 @@
   "homepage": "https://github.com/SjorsWijsman/progressive-web-apps-2021#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "ejs": "^3.1.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "grunt": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "npm-run-all": "^4.1.5",
+    "serve": "^11.3.2"
   }
 }

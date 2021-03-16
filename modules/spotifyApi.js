@@ -1,7 +1,10 @@
 const axios = require('axios');
+require('dotenv').config();
+
 const user = process.env.SPOTIFY_USER;
 const clientId = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+
 
 // Get Access Token
 function getAccessToken(callback) {
@@ -75,7 +78,6 @@ exports.getPlaylistList = (callback) => {
     })
   });
 }
-
 
 
 // Get playlist info & tracks
