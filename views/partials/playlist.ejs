@@ -18,7 +18,7 @@
           for ([i, item] of currentPlaylist.tracks.items.entries()) {
           const artists = item.track.artists.map(item => item.name);
         %>
-          <div><%= i %></div>
+          <div><%= i + 1 %></div>
           <div class="track-info">
             <img src="<%= item.track.album.images[2].url %>" alt="">
             <div>
