@@ -25,52 +25,68 @@ function getAccessToken(callback) {
     return callback(response.data.access_token);
   })
   .catch(error => {
-    console.error('error');
+    console.error(error);
     return null;
   })
 }
 
 
+// Get data
+function getData(callback, params) {
+  axios(params)
+    .then(response => {
+      return callback(response.data);
+    })
+    .catch((error) => {
+      // gist from: https://gist.github.com/fgilio/230ccd514e9381fafa51608fcf137253
+      if (error.response) {
+        /*
+         * The request was made and the server responded with a
+         * status code that falls out of the range of 2xx
+         */
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        /*
+         * The request was made but no response was received, `error.request`
+         * is an instance of XMLHttpRequest in the browser and an instance
+         * of http.ClientRequest in Node.js
+         */
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request and triggered an Error
+        console.log('Error', error.message);
+      }
+      console.log(error.config);
+    });
+}
+
 
 // Get playlists
-exports.getPlaylists = (callback) => {
+exports.getPlaylistList = (callback) => {
   getAccessToken((accessToken) => {
-    axios({
+    getData(callback, {
       url: `https://api.spotify.com/v1/users/${user}/playlists`,
       method: 'get',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
       },
     })
-    .then(response => {
-      return callback(response);
-    })
-    .catch(error => {
-      console.error('error 2');
-      return null;
-    })
-  })
+  });
 }
 
 
 
-// Get playlist
+// Get playlist info & tracks
 exports.getPlaylist = (id, callback) => {
   getAccessToken((accessToken) => {
-    axios({
+    getData(callback, {
       url: `https://api.spotify.com/v1/playlists/${id}`,
       method: 'get',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
       },
     })
-    .then(response => {
-      console.log(response.data.tracks.items)
-      return callback(response.data);
-    })
-    .catch(error => {
-      console.error('error 3');
-      return null;
-    })
-  })
+  });
 }
