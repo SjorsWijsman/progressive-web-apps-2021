@@ -1,4 +1,4 @@
-const { getPlaylist, getPlaylists } = require('./spotifyApi');
+const { getPlaylist, getPlaylistList } = require('./spotifyApi');
 
 // Retrieves & renders playlist list & details according to playlistId params
 exports.displayPlaylists = (req, res) => {

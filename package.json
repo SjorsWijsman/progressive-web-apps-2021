@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "npm-run-all build:*",
+    "build:html": "node scripts/build-html.js"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,11 @@
   "homepage": "https://github.com/SjorsWijsman/progressive-web-apps-2021#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "dotenv": "^8.2.0"
   }
 }
