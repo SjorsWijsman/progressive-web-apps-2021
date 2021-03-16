@@ -14,10 +14,22 @@ module.exports = function(grunt) {
         src: 'static/style/*.css',
         dest: 'dist/style.css',
       },
-
     },
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['static/*'], 
+            dest: 'dist/',
+            filter: 'isFile'
+          },
+        ]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.registerTask('default', 'concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 }
