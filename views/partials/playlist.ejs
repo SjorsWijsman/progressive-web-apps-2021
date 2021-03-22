@@ -4,7 +4,7 @@
     <img src="<%= currentPlaylist.images[1].url %>" alt="Playlist Cover Image">
     <div>
       <h1><%= currentPlaylist.name %></h1>
-      <a href="<%= currentPlaylist.external_urls.spotify %>" target="_blank">Link to playlist</a>
+      <a href="<%= currentPlaylist.external_urls.spotify %>" rel=”noreferrer noopener“ target="_blank">Link to playlist</a>
     </div>
   </container>
   <% if (currentPlaylist.tracks.items.length > 0) { %>
@@ -20,7 +20,7 @@
         %>
           <div><%= i + 1 %></div>
           <div class="track-info">
-            <img src="<%= item.track.album.images[2].url %>" alt="">
+            <img src="<%= item.track.album.images[2].url %>" alt="" loading=lazy>
             <div>
               <span><%= item.track.name %></span>
               <span><%= artists.join(", ") %></span>

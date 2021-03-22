@@ -217,7 +217,8 @@ body {
 
 #playlist-table .track-info img {
   height: 2.8rem;
-  padding-right: 0.7rem;
+  width: 2.8rem;
+  margin-right: 0.7rem;
 }
 
 #playlist-table .track-info div {
