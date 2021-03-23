@@ -21,10 +21,20 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
-            src: ['static/*'], 
+            src: ['static/*'],
             dest: 'dist/',
             filter: 'isFile'
           },
+        ]
+      },
+      resources: {
+        files: [
+          {
+            cwd: 'static/',
+            expand: true,
+            src: ['resources/**/*'],
+            dest: 'dist/',
+          }
         ]
       }
     }
