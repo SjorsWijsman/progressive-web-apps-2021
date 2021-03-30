@@ -57,6 +57,10 @@ body {
   grid-template-columns: 20rem 1fr;
 }
 
+object {
+  background-color: var(--color-gray);
+}
+
 /*
     Playlists overview
 */
@@ -131,7 +135,7 @@ body {
   padding-bottom: 1.2rem;
 }
 
-.playlist img {
+.playlist object {
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
@@ -159,7 +163,7 @@ body {
   align-items: center;
 }
 
-#playlist-info img {
+#playlist-info object {
   height: 6rem;
   width: 6rem;
   margin-right: 2rem;
@@ -215,23 +219,25 @@ body {
   align-items: center;
 }
 
-#playlist-table .track-info img {
+#playlist-table .track-info object {
   height: 2.8rem;
   width: 2.8rem;
   margin-right: 0.7rem;
 }
 
-#playlist-table .track-info div {
+#playlist-table .track-info p {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
-#playlist-table .track-info div :first-child {
+#playlist-table .track-info p :first-child {
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
 }
 
-#playlist-table .track-info div :last-child {
+#playlist-table .track-info p :last-child {
   opacity: 0.8;
 }

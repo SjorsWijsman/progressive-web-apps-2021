@@ -5,7 +5,7 @@
   <container id="playlists">
     <% for (playlist of playlists) { %>
       <a href="<% if (currentPlaylist) { %>.<% } %>./<%= playlist.id %>/index.html" class="playlist">
-        <img src="<%= playlist.images[2].url %>" alt="Playlist cover image" loading=lazy>
+        <object data="<%= playlist.images[2].url %>" alt="" loading="lazy" type="image/jpg"></object>
         <p><%= playlist.name %></p>
       </a>
     <% } %>

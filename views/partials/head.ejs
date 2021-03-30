@@ -3,15 +3,15 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Spotify Ranker helps users rank the tracks in their playlists.">
 <title>
-  <% if (currentPlaylist) { %>
+  <% if (locals.currentPlaylist) { %>
     <%= currentPlaylist.name %> -
   <% } %>
   Spotify Ranker
 </title>
-<link href="style.css" rel="stylesheet">
-<script src="service-worker.js"></script>
-<script src="script.js"></script>
+<link href="/style.css" rel="stylesheet">
+<script src="/service-worker.js"></script>
+<script src="/script.js" defer></script>
 <link rel="manifest" href="/manifest.json">
-<link rel="icon" type="image/png" href="resources/icons/icon-192x192.png">
+<link rel="icon" type="image/png" href="/resources/icons/icon-192x192.png">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
