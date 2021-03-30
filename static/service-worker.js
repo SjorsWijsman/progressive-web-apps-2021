@@ -4,11 +4,14 @@ const CORE_ASSETS = [
   '/style.css',
   '/script.js',
   '/manifest.json',
+  '/service-worker.js',
   '/resources/icons/icon-192x192.png',
   '/resources/icons/icon-256x256.png',
   '/resources/icons/icon-384x384.png',
   '/resources/icons/icon-512x512.png',
+  '/offline.html',
 ];
+const OFFLINE_URL = "offline.html";
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -35,21 +38,28 @@ self.addEventListener('install', (event) => {
         return cache.addAll(CORE_ASSETS);
       })
   );
+  self.skipWaiting();
 });
 
 // Get fetch requests from cache, store new html fetch requests to cache
 self.addEventListener('fetch', event => {
-  event.respondWith(caches.match(event.request)
-    .then(response => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(caches.match(event.request).then((response) => {
       return response || fetch(event.request).then(res => {
-        if (res.type === 'basic' && res.url.endsWith('.html')) {
-          caches.open(CORE_CACHE)
-            .then((cache) => {
-              cache.add(res.url, res)
-            })
-        }
+        caches.open(CORE_CACHE).then((cache) => {
+          cache.add(event.request.url, res)
+        })
         return res;
-      });
-    })
-  )
+      })
+    }).catch((error) => {
+      console.log("haha" + error);
+      return caches.open(CORE_CACHE).then((cache) => {
+        return cache.match(OFFLINE_URL);
+      })
+    }))
+  } else {
+    event.respondWith(caches.match(event.request).then((response) => {
+      return response || fetch(event.request)
+    }))
+  }
 });

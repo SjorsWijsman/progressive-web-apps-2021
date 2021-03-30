@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Spotify Ranker helps users rank the tracks in their playlists.">
+<title>Spotify Ranker</title>
+<link href="/style.css" rel="stylesheet">
+<script src="/service-worker.js"></script>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" href="/resources/icons/icon-192x192.png">
+<style>
+  body {
+    display: block;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<body>
+  <main>
+    <h1>Helemaal kapot :(</h1>
+    <p>Je bent offline. Bekijk deze opgeslagen pagina's:</p>
+    <nav>
+      <ul id="navigation">
+        <li>
+          <a href="/index.html">Hoofdpagina</a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+</body>
+<script>
+if ('caches' in window) {
+  const nav = document.getElementById('navigation');
+  caches.open('core-cache').then( cache => {
+    cache.keys().then((array) => {
+      for (request of array) {
+        if (request.url.endsWith('.html') && !request.url.includes('offline.html')) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.appendChild(document.createTextNode(request.url));
+          a.href = request.url;
+          li.appendChild(a);
+          nav.appendChild(li);
+        }
+      }
+    })
+  });
+}
+</script>
+</html>
