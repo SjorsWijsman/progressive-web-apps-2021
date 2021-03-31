@@ -1,6 +1,6 @@
 const grunt = require('grunt');
 
-module.exports = function(grunt) {
+module.exports = (grunt) => {
   grunt.initConfig({
     concat: {
       options: {
@@ -14,6 +14,17 @@ module.exports = function(grunt) {
         src: 'static/style/*.css',
         dest: 'dist/style.css',
       },
+    },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'dist/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'dist/',
+          ext: '.min.css'
+        }]
+      }
     },
     copy: {
       main: {
@@ -41,5 +52,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
 }

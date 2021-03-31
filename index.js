@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const compression = require('compression')
+
+app.use(compression())
 
 // Set view engine to ejs
 app.set('view engine', 'ejs');

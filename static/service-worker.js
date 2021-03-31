@@ -2,7 +2,7 @@ const CORE_CACHE = 'core-cache';
 const CORE_ASSETS = [
   '/',
   '/index.html',
-  '/style.css',
+  '/style.min.css',
   '/script.js',
   '/manifest.json',
   '/service-worker.js',

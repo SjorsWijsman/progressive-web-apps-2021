@@ -20,6 +20,7 @@ html {
   background-color: var(--color-background);
 }
 
+
 * {
   padding: 0;
   margin: 0;
@@ -59,7 +60,6 @@ body {
 
 object {
   background-color: var(--color-gray);
-  font-size: 0.5rem;
 }
 
 /*
