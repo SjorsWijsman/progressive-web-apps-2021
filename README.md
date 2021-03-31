@@ -64,8 +64,6 @@ npm run start
 Performance improvements I did:
 - Static site generation  
 - Caching visited sites & core assets
-- Added lazy loading to images
-- Replaced images with objects
 - Deferred non-critical assets
 - Combined CSS & JS to single files
 - Minified CSS
