@@ -1,5 +1,5 @@
 # Ranker
-Live version: [Link]()
+Live version: [Link](https://ancient-gorge-17717.herokuapp.com/index.html)
 
 Ranker is a [progressive web app](https://web.dev/progressive-web-apps/) that allows you to rank the songs in your Spotify playlists, allowing you to easily create top 10/50/etc. playlists. As of right now, this demo only displays the playlists and the first 100 songs in this playlist for authorized Spotify users.
 

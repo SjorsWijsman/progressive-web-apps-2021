@@ -8,7 +8,6 @@ app.set('view engine', 'ejs');
 // Set static folder
 app.use(express.static(__dirname + '/dist'));
 
-
 // Open app on port
 const port = process.env.PORT || 5000;
 app.listen(port);
