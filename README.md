@@ -60,7 +60,17 @@ npm run start
 - `/views` contains all the .ejs files created to build the HTML.  
 
 ## 🌐 Performance
+![Lighthouse]()
+Performance improvements I did:
+- Server side rendering 
+- Caching visited sites & core assets
+- Added lazy loading to images
+- Replaced images with objects
+- Deferred non-critical assets
+- Combined CSS & JS to single files
+- Minimized CSS & JS
 
+![Lighthouse performance]()
 
 ## 📃 License
 MIT License
