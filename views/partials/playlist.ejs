@@ -1,7 +1,7 @@
 <% if (currentPlaylist) { %>
 <section id="playlist-display">
   <container id="playlist-info">
-    <object data="<%= currentPlaylist.images[1].url %>" alt="" loading="lazy" type="image/jpg"></object>
+    <object data="<%= currentPlaylist.images[1].url %>" type="image/jpg"></object>
     <div>
       <h1><%= currentPlaylist.name %></h1>
       <a href="<%= currentPlaylist.external_urls.spotify %>" rel=”noreferrer noopener“ target="_blank">Link to playlist</a>
@@ -20,7 +20,7 @@
         %>
           <div><%= i + 1 %></div>
           <article class="track-info">
-            <object data="<%= item.track.album.images[2].url %>" alt="" loading="lazy" type="image/jpg"></object>
+            <object data="<%= item.track.album.images[2].url %>" type="image/jpg"></object>
             <p>
               <span><%= item.track.name %></span>
               <span><%= artists.join(", ") %></span>

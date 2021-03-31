@@ -59,6 +59,7 @@ body {
 
 object {
   background-color: var(--color-gray);
+  font-size: 0.5rem;
 }
 
 /*

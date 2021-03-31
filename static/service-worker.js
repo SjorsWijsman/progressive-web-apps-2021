@@ -1,6 +1,7 @@
 const CORE_CACHE = 'core-cache';
 const CORE_ASSETS = [
   '/',
+  '/index.html',
   '/style.css',
   '/script.js',
   '/manifest.json',
