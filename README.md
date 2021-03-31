@@ -60,7 +60,7 @@ npm run start
 - `/views` contains all the .ejs files created to build the HTML.  
 
 ## 🌐 Performance
-![Lighthouse]()
+![Lighthouse](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/lighthouse.png?raw=true)
 Performance improvements I did:
 - Server side rendering 
 - Caching visited sites & core assets
@@ -70,7 +70,7 @@ Performance improvements I did:
 - Combined CSS & JS to single files
 - Minimized CSS & JS
 
-![Lighthouse performance]()
+![Lighthouse performance](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/lighthouse-performance.png?raw=true)
 
 ## 📃 License
 MIT License
