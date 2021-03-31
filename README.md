@@ -52,12 +52,12 @@ npm run start
 ## 📕 Folder Structure
 ![Folder Structure](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/folder-structure.png?raw=true)  
 
-`/dist` contains all the files that have been built by the server that get sent to the user.  
-`/docs` contains files for the docs you're reading right now.  
-`/modules` contains JavaScript modules used in the Node Backend.  
-`/scripts` contains JavaScript scripts used in package.json for building purposes.  
-`/static` contains files served to the client side user by being built to the `/dist` folder.  
-`/views` contains all the .ejs files created to build the HTML.  
+- `/dist` contains all the files that have been built by the server that get sent to the user.  
+- `/docs` contains files for the docs you're reading right now.  
+- `/modules` contains JavaScript modules used in the Node Backend.  
+- `/scripts` contains JavaScript scripts used in package.json for building purposes.  
+- `/static` contains files served to the client side user by being built to the `/dist` folder.  
+- `/views` contains all the .ejs files created to build the HTML.  
 
 ## 🌐 Performance
 
