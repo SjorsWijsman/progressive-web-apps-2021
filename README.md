@@ -68,7 +68,8 @@ Performance improvements I did:
 - Replaced images with objects
 - Deferred non-critical assets
 - Combined CSS & JS to single files
-- Minimized CSS & JS
+- Minified CSS
+- GZip Compression 
 
 ![Lighthouse performance](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/lighthouse-performance.png?raw=true)
 
