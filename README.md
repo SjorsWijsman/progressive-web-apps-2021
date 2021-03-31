@@ -1,7 +1,7 @@
 # Ranker
 Live version: [Link](https://ancient-gorge-17717.herokuapp.com/index.html)
 
-Ranker is a [progressive web app](https://web.dev/progressive-web-apps/) that allows you to rank the songs in your Spotify playlists, allowing you to easily create top 10/50/etc. playlists. As of right now, this demo only displays the playlists and the first 100 songs in this playlist for authorized Spotify users.
+Ranker is a statically generated [progressive web app](https://web.dev/progressive-web-apps/) that allows you to rank the songs in your Spotify playlists, allowing you to easily create top 10/50/etc. playlists. As of right now, this demo only displays the playlists and the first 100 songs in this playlist for authorized Spotify users.
 
 
 ![App Screenshot](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/screenshot.png?raw=true)
@@ -18,7 +18,7 @@ Ranker is a [progressive web app](https://web.dev/progressive-web-apps/) that al
 </table>
 
 ## ⭐ Features
-- Server side rendering.
+- Static site generation.
 - Service worker allowing the app to be installable, cache your files and work offline.
 - A list of all your public playlists.
 - A detail view of your playlists containing its songs and other details.
@@ -62,7 +62,7 @@ npm run start
 ## 🌐 Performance
 ![Lighthouse](https://github.com/SjorsWijsman/progressive-web-apps-2021/blob/master/docs/lighthouse.png?raw=true)
 Performance improvements I did:
-- Server side rendering 
+- Static site generation  
 - Caching visited sites & core assets
 - Added lazy loading to images
 - Replaced images with objects
